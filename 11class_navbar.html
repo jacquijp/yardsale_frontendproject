@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,8 +25,41 @@
             margin: 0;
             font-family: 'Quicksand', sans-serif;
         }
+
+        nav {
+            display: flex;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left {
+            display: flex;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <img src="./icons/icon_menu.svg" alt="menu" class="menu">
@@ -57,12 +91,14 @@
         </div>
 
         <div class="navbar-right">
-            <li>camilayokoo@gmail.com</li>
-            <li class="navbar-shopping-cart">
-                <img src="./icons/icon_shopping_cart.svg"
-                alt="shopping cart">
-                <div>2</div>
+            <ul>
+                <li>camilayokoo@gmail.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
+                    <div>2</div>
+            </ul>
         </div>
     </nav>
 </body>
+
 </html>
