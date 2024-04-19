@@ -30,6 +30,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0 24px;
+            border-bottom: 1px solid var(--very-light-pink);
         }
 
         .menu {
@@ -40,6 +41,12 @@
             width: 100px;
         }
 
+
+        .navbar-left,
+        .navbar-right {
+            display: flex;
+        }
+
         .navbar-left ul,
         .navbar-right ul {
             list-style: none;
@@ -47,10 +54,7 @@
             margin: 0;
             display: flex;
             align-items: center;
-        }
-
-        .navbar-left {
-            display: flex;
+            height: 60px;
         }
 
         .navbar-left ul {
@@ -71,6 +75,54 @@
             border: 1px solid var(--hospital--green);
             color: var(--hospital--green);
         }
+
+        .navbar-email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+
+        .navbar-shopping-cart {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div {
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital--green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            font-weight: bold;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .email-nav img {
+            margin-left: 6px;
+            transform: rotate(90deg);
+            margin-right: 12px;
+        }
+
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+                margin-right: 10px;
+            }
+
+        .navbar-left ul {
+            display: none;
+        }
+
+        .navbar-right .navbar-email {
+            display: none;
+        }
+    
+        }
+    
     </style>
 </head>
 
@@ -106,12 +158,16 @@
 
         <div class="navbar-right">
             <ul>
-                <li>camilayokoo@gmail.com</li>
+                <li class="navbar-email">camilayokoo@gmail.com
+                    <img src="./icons/flechita.svg" alt="arrow">
+                </li>
                 <li class="navbar-shopping-cart">
                     <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
                     <div>2</div>
+                </li>
             </ul>
         </div>
+
     </nav>
 </body>
 
